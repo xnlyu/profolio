@@ -1,10 +1,10 @@
 <template>
   <header class="header">
     <div class="wrap">
-      <div class="header-content">
-        <a href="#" class="header-item">About</a>
-        <a href="#" class="header-item">Showcase</a>
-        <a href="#" class="header-item">Contact</a>
+      <div class="header-content" v-scroll-spy-active v-scroll-spy-link>
+        <a class="header-item">About Me</a>
+        <a class="header-item">Web</a>
+        <a class="header-item">Design</a>
       </div>
     </div>
   </header>
@@ -19,17 +19,32 @@ export default {};
   position: fixed;
   top: 0;
   width: 100%;
-  background: black;
+  background: #5a88c3;
+  z-index: 10;
 
   &-content {
     display: flex;
+    justify-content: space-evenly;
   }
-
   &-item {
-    padding: 0 10px;
-    font-size: 15px;
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 2px 15px;
+    margin: 10px 0;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    border-radius: 25px;
+    border: 2px silid white;
+    font-weight: bold;
+    cursor: grabbing;
+
+
+    &.active {
+      background-color: #fff;
+      color: #5a88c3;
+    }
   }
 }
 </style>

@@ -8,9 +8,12 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "normalize.css": "^8.0.1",
-    "sass": "^1.54.2",
-    "vue": "^3.2.37"
+    "swiper": "^8.3.2",
+    "vue": "^3.2.37",
+    "vue-awesome-swiper": "^5.0.1",
+    "vue3-scroll-spy": "^1.0.8"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
@@ -19,6 +22,7 @@
     "eslint": "^8.5.0",
     "eslint-plugin-vue": "^9.0.0",
     "prettier": "^2.5.1",
+    "sass": "^1.54.1",
     "vite": "^3.0.1"
   }
 }
