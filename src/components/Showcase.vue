@@ -71,4 +71,21 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .showcase {
+    &-select {
+      a {
+        justify-content: space-between;
+        height: 40px;
+        width:80px;
+        line-height: 40px;
+        border-radius: 15px;
+        min-width: 50px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
 </style>

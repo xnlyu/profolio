@@ -1,12 +1,12 @@
 <template>
-  <div class="intro">
+<div class="intro">
     <div class="wrap">
       <div class="intro-content">
         <div class="profile">
-          <div class="basicInfo-image">
-            <img src="../assets/profile2.jpg" alt="" />
-          </div>
-          <div class="Intro-left">
+          <div class="basicInfo">
+            <div class="basicInfo-image">
+              <img src="../assets/profile2.jpg" alt="" />
+            </div>
             <div class="basicInfo-content">
               <div class="basicInfo-name">CHENG <br />EN<br />LYU</div>
               <ul class="basicInfo-contact">
@@ -60,8 +60,36 @@
             </ul>
           </div>
         </div>
-        <div class="web">web skill</div>
-        <div class="design">design skill</div>
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-title"><b>W</b>eb</div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <img src="../assets/test.png" alt="" />
+              </li>
+              <li class="skill-item">
+                <img src="../assets/test.png" alt="" />
+              </li>
+              <li class="skill-item">
+                <img src="../assets/test.png" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div class="skill">
+            <div class="skill-title"><b>D</b>esign</div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <img src="../assets/test.png" alt="" />
+              </li>
+              <li class="skill-item">
+                <img src="../assets/test.png" alt="" />
+              </li>
+              <li class="skill-item">
+                <img src="../assets/test.png" alt="" />
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -72,24 +100,17 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.profile {
-  border: 1px solid white;
-  border-radius: 10%;
-  background-color: white;
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
-  padding: 100px;
-}
-
 .intro {
   height: 80vh;
   padding-top: 150px;
   background: white;
-
+  &-content {
+    position: relative;
+  }
 }
 .basicInfo {
   width: 50%;
   display: flex;
-
   &-image {
     flex-shrink: 0;
     width: 200px;
@@ -109,7 +130,6 @@ export default {};
     font-weight: bold;
     line-height: 45px;
     color: #5a88c3;
-
   }
 
   &-icon {
@@ -122,7 +142,7 @@ export default {};
     padding: 10px 0;
     margin: 0;
     list-style: none;
-    
+
     li {
       display: flex;
       align-items: center;
@@ -166,9 +186,120 @@ export default {};
     background: #a8c35a;
   }
 }
+.profile {
+  box-sizing: border-box;
+  width: 70%;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10%;
+  box-shadow: 0 5px 10px #333;
+  position: relative;
+  z-index: 1;
+  border: 1px solid white;
+}
+.skills {
+  box-sizing: border-box;
+  position: absolute;
+  width: calc(35% + 30px);
+  top: 0;
+  left: 65%;
+  padding-top: 50px;
+  margin-left: -30px;
+  margin-top:30px;
+}
+.skill {
+  background: #e9f1fc;
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px #333;
+  & + & {
+    margin-top: 40px;
+  }
+  &-title {
+    font-size: 25px;
+    font-weight: bold;
+    color:#5a88c3;
+    transform: translate(25%, 0%);
+    b {
+      font-size: 50px;
+    }
+  }
+  &-list {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    list-style: none;
+    transform: translate(20%, 15%);
+  }
+  &-item {
+    & + & {
+      margin-left: 5px;
+    }
+  }
+  img {
+    width: 50px;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .intro {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
   }
+  .profile {
+    width: 80%;
+    padding: 50px;
+    margin: auto;
+  }
+  .skills {
+    position: relative;
+    width: 80%;
+    top: 0;
+    left: 0;
+    margin: auto;
+
+    }
+  .skill {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+
+&-list{
+  align-items: center;
+}
+
+  }
+  .basicInfo {
+    &-name {
+      font-size: 50px;
+      line-height: 43px;
+    }
+    &-image {
+      width: 200px;
+      height: 200px;
+    }
+    &-icon {
+      width: 25px;
+    }
+  }
+  .experience {
+    &-main {
+      font-size: 18px;
+      display:inline-block;
+    }
+    &:last-child li {
+      display: block;
+    }
+
+    &-green{
+      display:inline-block;
+    }
+    
+    &-title{
+      margin-top:30px;
+    }
+
+    }
 }
 </style>
