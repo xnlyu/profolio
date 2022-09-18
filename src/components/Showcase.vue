@@ -40,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 .showcase {
   background: white;
-  padding: 30px 0;
+  padding: 140px 0;
   &-content {
     height: 600px;
     background-color: #e9f1fc;

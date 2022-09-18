@@ -1,5 +1,5 @@
 <template>
-<div class="intro">
+  <div class="intro">
     <div class="wrap">
       <div class="intro-content">
         <div class="profile">
@@ -11,16 +11,16 @@
               <div class="basicInfo-name">CHENG <br />EN<br />LYU</div>
               <ul class="basicInfo-contact">
                 <li>
-                  <img
-                    src="../assets/phone.png"
-                    class="basicInfo-icon"
-                  />0925397695
+                  <img src="../assets/phone.png" class="basicInfo-icon" /><a
+                    class="icon-word"
+                    >0925397695</a
+                  >
                 </li>
                 <li>
-                  <img
-                    src="../assets/email.png"
-                    class="basicInfo-icon"
-                  />lyutissues@gmail.com
+                  <img src="../assets/email.png" class="basicInfo-icon" /><a
+                    class="icon-word"
+                    >lyutissues@gmail.com</a
+                  >
                 </li>
               </ul>
             </div>
@@ -65,13 +65,13 @@
             <div class="skill-title"><b>W</b>eb</div>
             <ul class="skill-list">
               <li class="skill-item">
-                <img src="../assets/test.png" alt="" />
+                <img src="../assets/ai.png" alt="" />
               </li>
               <li class="skill-item">
-                <img src="../assets/test.png" alt="" />
+                <img src="../assets/photo.png" alt="" />
               </li>
               <li class="skill-item">
-                <img src="../assets/test.png" alt="" />
+                <img src="../assets/indd.png" alt="" />
               </li>
             </ul>
           </div>
@@ -79,13 +79,13 @@
             <div class="skill-title"><b>D</b>esign</div>
             <ul class="skill-list">
               <li class="skill-item">
-                <img src="../assets/test.png" alt="" />
+                <img src="../assets/html.png" alt="" />
               </li>
               <li class="skill-item">
-                <img src="../assets/test.png" alt="" />
+                <img src="../assets/css.png" alt="" />
               </li>
               <li class="skill-item">
-                <img src="../assets/test.png" alt="" />
+                <img src="../assets/js.png" alt="" />
               </li>
             </ul>
           </div>
@@ -101,20 +101,29 @@ export default {};
 
 <style lang="scss" scoped>
 .intro {
-  height: 80vh;
-  padding-top: 150px;
+  height: 60vh;
+  padding-top: 120px;
   background: white;
   &-content {
     position: relative;
   }
 }
+
+.icon {
+  &-word {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
 .basicInfo {
   width: 50%;
+
   display: flex;
   &-image {
     flex-shrink: 0;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     overflow: hidden;
     border-radius: 50%;
     img {
@@ -122,20 +131,19 @@ export default {};
     }
   }
   &-content {
-    padding-left: 20px;
+    padding-left: 25px;
   }
   &-name {
-    padding-top: 10px;
-    font-size: 50px;
+    padding-top: 18px;
+    font-size: 40px;
     font-weight: bold;
-    line-height: 45px;
+    line-height: 35px;
     color: #5a88c3;
   }
 
   &-icon {
-    width: 25px;
+    width: 18px;
     margin-right: 5px;
-    font-weight: bold;
   }
 
   &-contact {
@@ -152,6 +160,7 @@ export default {};
 }
 .experience {
   &-title {
+    padding-top: 30px;
     font-weight: bold;
     color: #5a88c3;
     margin-bottom: 10px;
@@ -168,15 +177,15 @@ export default {};
   &-main {
     color: black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     margin-right: 10px;
   }
   &-sub {
     color: white;
-    font-size: 14px;
+    font-size: 10px;
     background: #c38b5a;
-    height: 26px;
-    line-height: 26px;
+    height: 19px;
+    line-height: 19px;
     border-radius: 13px;
     padding: 0 10px;
     font-weight: bold;
@@ -205,31 +214,29 @@ export default {};
   left: 65%;
   padding-top: 50px;
   margin-left: -30px;
-  margin-top:30px;
+  margin-top: 30px;
 }
 .skill {
   background: #e9f1fc;
-  padding: 30px 50px;
+  padding: 30px 50px 30px 100px;
   border-radius: 20px;
   box-shadow: 2px 5px 10px #333;
   & + & {
     margin-top: 40px;
   }
   &-title {
-    font-size: 25px;
-    font-weight: bold;
-    color:#5a88c3;
-    transform: translate(25%, 0%);
+    padding-bottom: 15px;
+    font-size: 20px;
+    color: #5a88c3;
     b {
-      font-size: 50px;
+      font-size: 35px;
     }
   }
   &-list {
     margin: 0;
-    padding: 5px;
+    padding: 0px;
     display: flex;
     list-style: none;
-    transform: translate(20%, 15%);
   }
   &-item {
     & + & {
@@ -237,15 +244,16 @@ export default {};
     }
   }
   img {
-    width: 50px;
+    width: 35px;
+    padding-right: 15px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .intro {
     height: auto;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 130px;
+    padding-bottom: 0px;
   }
   .profile {
     width: 80%;
@@ -258,16 +266,27 @@ export default {};
     top: 0;
     left: 0;
     margin: auto;
-
-    }
+  }
   .skill {
-    padding: 20px;
+    background: #FFF;
+    padding: 20px 0px 20px 50px;
+    box-sizing: border-box;
+    align-items: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    
+    &-title {
+    padding-right: 40px;
+    padding-left:0px;
+    }
 
-&-list{
-  align-items: center;
-}
+    img {
+    width: 40px;
+    padding-left: 15px;
+    padding-right: 40px; 
+  }
+
+
 
   }
   .basicInfo {
@@ -285,21 +304,39 @@ export default {};
   }
   .experience {
     &-main {
-      font-size: 18px;
-      display:inline-block;
+      font-size: 16px;
+      display: inline-block;
     }
     &:last-child li {
       display: block;
     }
 
-    &-green{
-      display:inline-block;
-    }
-    
-    &-title{
-      margin-top:30px;
+    &-green {
+      display: inline-block;
     }
 
-    }
+  }
+
+
+  .basicInfo {
+  
+  &-content {
+    padding-left: 40px;
+  }
+  &-name {
+    padding-top: 20px;
+    font-size: 50px;
+    line-height: 40px;
+ padding-bottom: 5px;
+  }
+
+  &-icon {
+    width: 18px;
+    margin-right: 5px;
+  }
+
+
+}
+
 }
 </style>
