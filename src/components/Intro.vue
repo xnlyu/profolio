@@ -339,4 +339,159 @@ export default {};
 }
 
 }
+
+
+@media screen and (max-width: 400px) {
+
+  .basicInfo {
+  display: flex;
+  &-image {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  &-content {
+    padding-left: 15px;
+  }
+  &-name {
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #5a88c3;
+  }
+
+  &-icon {
+    width: 15px;
+    margin-right: 5px;
+  }
+
+  &-contact {
+    padding: 2px 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+
+.profile {
+  box-sizing: border-box;
+  width: 90%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px #333;
+  position: relative;
+  z-index: 1;
+  border: 1px solid white;
+}
+
+.intro {
+  height: 60vh;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  background: white;
+  &-content {
+    position: relative;
+  }
+}
+
+
+.experience {
+  &-title {
+    padding-top: 15px;
+    font-weight: bold;
+    color: #5a88c3;
+    margin-bottom: 10px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  &-main {
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    margin-right: 10px;
+  }
+  &-sub {
+    color: white;
+    font-size: 7px;
+    background: #c38b5a;
+    height: 14px;
+    line-height: 14px;
+    border-radius: 13px;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+
+  &-green {
+    background: #a8c35a;
+  }
+}
+
+.skill {
+  background: #FFF;
+  padding: 15px 20px 15px 20px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px #333;
+  & + & {
+    margin-top: 40px;
+  }
+  &-title {
+    padding-bottom: 15px;
+    font-size: 25px;
+    color: #5a88c3;
+    b {
+      font-size: 35px;
+    }
+  }
+  &-list {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    list-style: none;
+  }
+  &-item {
+    & + & {
+      margin-left: 0px;
+    }
+  }
+  img {
+    width: 35px;
+    padding-right: 0px;
+  }
+}
+
+
+.skills {
+  position: relative;
+    width: 90%;
+    top: 0;
+    left: 0;
+    margin: auto;
+
+}
+
+
+  
+
+}
+
 </style>

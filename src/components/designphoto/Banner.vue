@@ -6,7 +6,7 @@
       <swiper
         class="banner-list"
         :slidesPerView="'1'"
-        :spaceBetween="1"
+        :spaceBetween="200"
         :centeredSlides="true"
         :navigation="true"
         :modules="modules"
@@ -103,7 +103,7 @@
       box-sizing: border-box;
       img {
         transition: transform ease 0.2s;
-        width: 70%;
+        width: 100%;
       }
     }
   }
@@ -115,8 +115,43 @@
   @media screen and (max-width: 768px) {
     .banner {
       padding: 40px 20px;
+    
+
+    &-item {
+      img {
+        transition: transform ease 0.2s;
+        width: 100%;
+      }
+    }
+}
+
+  }
+
+
+  @media screen and (max-width: 400px) {
+ 
+  .banner {
+    &-title {
+      font-size: 20px;
+      background-color: #5a88c3;
+      color:#FFF;
+      display: inline-block;
+      border: 2px silid #5a88c3;
+      border-radius: 10px;
+      padding: 5px;
+      font-weight: bold;
+    }
+    &-item {      
+      padding-top: 40px;
+      box-sizing: border-box;
+      img {
+        transition: transform ease 0.2s;
+        width: 100%;
+      }
     }
   }
+  }
+
   </style>
   <style>
   .swiper-button-next,

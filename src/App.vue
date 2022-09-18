@@ -46,4 +46,21 @@ export default {
   color:#FFF;
   list-style: circle;
 }
+
+
+
+@media screen and (max-width: 400px) {
+
+.contact {
+  display: flex;
+  padding: 5px 0;
+  margin: 0;
+  list-style: none;
+  justify-content: space-evenly;
+  color:#FFF;
+  list-style: circle;
+  font-size: 10px;
+}
+
+}
 </style>
