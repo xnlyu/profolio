@@ -49,7 +49,7 @@ export default {
 
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
 
 .contact {
   display: flex;

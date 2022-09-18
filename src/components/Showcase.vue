@@ -89,17 +89,18 @@ export default {
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420) {
   .showcase {
     &-select {
       a {
         justify-content: space-between;
-        height: 30px;
-        width:45px;
-        line-height: 30px;
+        height: 20px;
+        width:25px;
+        line-height: 20px;
         border-radius: 15px;
         min-width: 45px;
         font-size: 10px;
+        margin-bottom: 15px;
       }
     }
   }

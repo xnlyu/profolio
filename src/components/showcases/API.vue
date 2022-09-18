@@ -1,6 +1,6 @@
 <template>
   <div id="api">
-    <swiper>
+    <swiper :navigation="true" :modules="modules">
       <swiper-slide v-for="movie in list" :key="movie.id" class="swiper">
         <div class="movie">
           <div class="movie-content">
@@ -9,12 +9,18 @@
             </div>
             <div class="movie-desc">{{ movie.overview }}</div>
           </div>
-          <figure
-            class="movie-image"
-            :style="{
-              'background-image': `url(https://image.tmdb.org/t/p/w500${movie.backdrop_path})`,
-            }"
-          ></figure>
+          <picture class="movie-image">
+            <source
+              :srcset="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
+              media="(max-width: 768px)"
+            />
+            <source
+              :srcset="`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`"
+            />
+            <img
+              :src="`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`"
+            />
+          </picture>
         </div>
       </swiper-slide>
     </swiper>
@@ -24,8 +30,9 @@
 <script>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import axios from "axios";
-
+import { Navigation } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
 
 export default {
   components: {
@@ -35,6 +42,7 @@ export default {
   data() {
     return {
       list: [],
+      modules: [Navigation],
     };
   },
   methods: {},
@@ -63,11 +71,10 @@ export default {
 
   &-image {
     display: block;
-    width: 100%;
-    padding-top: 56.25%;
     margin: 0;
-    background-size: cover;
-    background-position: center;
+    img {
+      width: 100%;
+    }
   }
   &-content {
     width: 100%;
@@ -81,6 +88,7 @@ export default {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     );
+    box-sizing: border-box;
   }
   &-title {
     font-size: 20px;
@@ -90,5 +98,11 @@ export default {
     color: #ccc;
     font-size: 12px;
   }
+}
+</style>
+<style>
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
 }
 </style>

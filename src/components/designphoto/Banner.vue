@@ -6,7 +6,7 @@
       <swiper
         class="banner-list"
         :slidesPerView="'1'"
-        :spaceBetween="200"
+        :spaceBetween="10"
         :centeredSlides="true"
         :navigation="true"
         :modules="modules"
@@ -86,67 +86,70 @@
   
   <style lang="scss" scoped>
   .banner {
-    padding-top: 80px;
-    padding-bottom:45px;
     &-title {
-      font-size: 30px;
-      background-color: #5a88c3;
-      color:#FFF;
-      display: inline-block;
-      border: 2px silid #5a88c3;
-      border-radius: 15px;
-      padding: 5px;
-      font-weight: bold;
+      margin-top: 30px;
+    font-size: 20px;
+    background-color: #5a88c3;
+    color: #fff;
+    display: inline-block;
+    border: 2px silid #5a88c3;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  &-item {
+    margin-top: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    transform:translate(25px, 0%);
+    img {
+      transition: transform ease 0.2s;
+      width: 90%;
     }
-    &-item {      
-      padding-top: 40px;
-      box-sizing: border-box;
-      img {
-        transition: transform ease 0.2s;
-        width: 100%;
-      }
-    }
+  }
   }
   .swiper-slide-active {
     img {
-      transform: scale(1.1);
+      transform: scale(1.3);
     }
   }
   @media screen and (max-width: 768px) {
     .banner {
-      padding: 40px 20px;
-    
-
-    &-item {
-      img {
-        transition: transform ease 0.2s;
-        width: 100%;
-      }
+      &-title {
+        margin-top:50px;
+      margin-bottom:30px;
+      margin-left: 50px;
     }
+
+      &-item {
+    padding: 40px;
+    transform: translate(0%, 0%);
+    box-sizing: border-box;
+    img {
+      transition: transform ease 0.2s;
+      width: 100%;
+    }
+  }
 }
 
   }
 
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
  
   .banner {
     &-title {
-      font-size: 20px;
-      background-color: #5a88c3;
-      color:#FFF;
-      display: inline-block;
-      border: 2px silid #5a88c3;
-      border-radius: 10px;
-      padding: 5px;
-      font-weight: bold;
+      font-size: 15px;
+      margin-bottom:10px;
     }
-    &-item {      
+    &-item {
+      transform: translate(10%, 0%);
       padding-top: 40px;
       box-sizing: border-box;
       img {
         transition: transform ease 0.2s;
-        width: 100%;
+        width: 75%;
       }
     }
   }
