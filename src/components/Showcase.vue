@@ -93,14 +93,12 @@ export default {
   .showcase {
     &-select {
       a {
-        justify-content: space-between;
-        height: 20px;
-        width:25px;
-        line-height: 20px;
-        border-radius: 15px;
-        min-width: 45px;
-        font-size: 10px;
-        margin-bottom: 15px;
+        height: 40px;
+        width:80px;
+        line-height: 40px;
+        border-radius: 5px;
+        min-width: 50px;
+        font-size: 15px;
       }
     }
   }
