@@ -13,13 +13,13 @@
                 <li>
                   <img src="../assets/phone.png" class="basicInfo-icon" /><a
                     class="icon-word"
-                    >0925397695</a
+                    >lyutissues@gmail.com</a
                   >
                 </li>
                 <li>
                   <img src="../assets/email.png" class="basicInfo-icon" /><a
                     class="icon-word"
-                    >lyutissues@gmail.com</a
+                    >0925397695</a
                   >
                 </li>
               </ul>
@@ -62,7 +62,7 @@
         </div>
         <div class="skills">
           <div class="skill">
-            <div class="skill-title"><b>W</b>eb</div>
+            <div class="skill-title"><b>D</b>esign</div>
             <ul class="skill-list">
               <li class="skill-item">
                 <img src="../assets/ai.png" alt="" />
@@ -76,7 +76,7 @@
             </ul>
           </div>
           <div class="skill">
-            <div class="skill-title"><b>D</b>esign</div>
+            <div class="skill-title"><b>W</b>eb</div>
             <ul class="skill-list">
               <li class="skill-item">
                 <img src="../assets/html.png" alt="" />
